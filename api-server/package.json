@@ -1,0 +1,31 @@
+{
+  "name": "api-server",
+  "version": "1.0.0",
+  "description": "Diputecnics",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "mocha test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Monty4/DiputacioBCN.git"
+  },
+  "author": "Mario Montalbán",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Monty4/DiputacioBCN/issues"
+  },
+  "homepage": "https://github.com/Monty4/DiputacioBCN#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "logic": "0.0.3",
+    "mongoose": "^5.5.4",
+    "request-promise": "^4.2.4",
+    "routes": "^2.1.0"
+  }
+}
