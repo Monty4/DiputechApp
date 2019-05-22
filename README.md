@@ -28,4 +28,4 @@ The project is an APP for technical department where we can find information fro
 
 ## DEVELOPER: Mario Montalbán
 
-- [GITHUB](https://github.com/Monty4/Time-Bank/tree/develop)
+- [GITHUB](https://github.com/Monty4/DiputechApp)
