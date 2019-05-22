@@ -1,13 +1,13 @@
 const login = require('./login')
+const edit = require('./edit')
 const listareas = require('./listareas')
 const listusers = require('./listusers')
 const list = require('./list')
-// const listuser = require('./listuser')
 
 module.exports = {
     login,
+    edit,
     listareas,
     listusers,
     list,
-    // listuser
 } 

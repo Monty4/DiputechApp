@@ -30,7 +30,7 @@ const api = {
     // },
 
     login(username, password) {
-        return this._call('post', 'login', { username, password})
+        return this._call('post', 'login', { username, password })
     },
 
     list() {
@@ -45,12 +45,12 @@ const api = {
         return this._call('get', 'users', undefined, { name, surname })
     },
 
-    // user(username,password) {
-    //     return this._call('post', 'user', { username, password })
-    // },
-
     listUser(token) {
         return this._call('get', 'user', undefined, token)
+    },
+
+    updateUser(id, password) {
+        return this._call('post', 'edit', { id, password })
     }
 }
 
