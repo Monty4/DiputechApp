@@ -9,7 +9,7 @@ function success(data) {
 function fail(error) {
     const res = { status: 'KO' }
 
-    if(error) res.erro = error
+    if(error) res.error = error
 
     return res
 }

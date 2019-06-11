@@ -41,16 +41,32 @@ const api = {
         return this._call('get', 'area')
     },
 
-    users(name, surname) {
-        return this._call('get', 'users', undefined, { name, surname })
+    users(area, name, surname) {
+        return this._call('get', 'users', undefined, { area, name, surname })
     },
 
     listUser(token) {
         return this._call('get', 'user', undefined, token)
     },
 
+    centres() {
+        return this._call('get', 'centres')
+    },
+
+    getCentre(_id) {
+        return this._call('get', 'centre', undefined, { _id })
+    },
+
+    getUnitat(_id) {
+        return this._call('get', 'unitat', undefined, { _id })
+    },
+
     updateUser(id, password) {
-        return this._call('post', 'edit', { id, password })
+        return this._call('put', 'updateuser', { id, password })
+    },
+
+    stock(id, description) {
+        return this._call('get', 'stock', undefined, { id, description })
     }
 }
 

@@ -26,5 +26,16 @@ const User = new Schema({
     },
     mobile: {
         type: Number
-    }
+    },
+    unitat: {
+        type: String
+    },
+    centre: {
+        type: ObjectId,
+        ref: 'Centre'
+    },
+    area: {
+        type: ObjectId,
+        ref: 'Area'
+    },
 })
