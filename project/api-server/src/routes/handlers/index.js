@@ -1,4 +1,5 @@
 const login = require('./login')
+const verify = require('./verify')
 const updateuser = require('./updateuser')
 const listareas = require('./listareas')
 const listusers = require('./listusers')
@@ -9,9 +10,11 @@ const listcentres = require('./listcentres')
 const liststock = require('./liststock')
 const newstock = require('./newstock')
 const updatestock = require('./updatestock')
+const removestock = require('./removestock')
 
 module.exports = {
     login,
+    verify,
     updateuser,
     listareas,
     listusers,
@@ -21,5 +24,6 @@ module.exports = {
     listcentres,
     liststock,
     newstock,
-    updatestock
+    updatestock,
+    removestock
 } 

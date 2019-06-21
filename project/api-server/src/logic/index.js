@@ -37,11 +37,11 @@ const logic = {
     },
 
     // Update User by ID
-    updateUser(_id,password) {
-        // console.log(_id)
-        // console.log(typeof(password))
-        // console.log({password})
-        return User.updateOne({_id}, {password}) // Devuelve el id
+    updateUser(id,password) {
+        console.log(id)
+        console.log(password)
+
+        return User.findByIdAndUpdate({ _id:id }, { $set:{ password } }) // Devuelve el id
         // return User.updateOne({_id}, {password}).then(()=>password) // Devuelve el password
         // return User.findById({_id},{name:1, username: 1, password: 1})
         // return User.findOneAndUpdate({id:1}, {$set:{password}})
@@ -85,6 +85,11 @@ const logic = {
             if(err){ console.log("Something wrong when updating data! "+err) }
             console.log(doc)
         })
+    },
+
+    // Remove Stock by Id
+    removeStock(id) {
+        return Stock.findByIdAndRemove({ _id: id })
     }
 }
 
