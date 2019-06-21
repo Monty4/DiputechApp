@@ -1,6 +1,6 @@
 const { User, Centre, Area, Unitat, Stock } = require('../models')
 const ObjectId = require('mongoose').Types.ObjectId
-// const mongoose = require('mongoose')
+const mongoose = require('mongoose')
 
 const logic = {
     // User Login
@@ -60,14 +60,32 @@ const logic = {
     listCentres() {
         return Centre.find()
     },
-    
-    listStock(centre, description) {
+
+    // Get Stock by Centre [and Description] ordered by Description ASC
+    listStock(centre, title) {
+
         let filter = {}
         filter.centre = new ObjectId(centre)
-        if (description) filter.description = { $regex: new RegExp(description, 'i') }
+        if (title) filter.title = { $regex: new RegExp(title, 'i') }
 
-        return Stock.find(filter)
+        return Stock.find(filter).sort({ title: 1 })
+    },
+
+    // New Stock Item
+    newStock(centre, title, qt) {
+        return Stock.create({ centre, title, qt })
+    },
+
+    // Update Stock title and quantity
+    updateStock(id, title, qt) {
+
+        q = parseInt(qt)
+
+        return Stock.findByIdAndUpdate({ _id:id }, { $set:{ title,qt:q } }, function(err,doc){
+            if(err){ console.log("Something wrong when updating data! "+err) }
+            console.log(doc)
+        })
     }
 }
 
-module.exports = logic 
+module.exports = logic

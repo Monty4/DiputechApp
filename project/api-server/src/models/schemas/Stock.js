@@ -1,16 +1,21 @@
 const mongoose = require('mongoose')
 const { Schema, Schema: { ObjectId} } = mongoose
+// const Schema = mongoose.Schema
 
-const Stock = new Schema({
+module.exports = new Schema({
     centre: {
         type: ObjectId,
-        ref: 'Centre'
-    },
+        required: true,
+        ref: 'Centre',
+        default: '5cfa536132a80d082cbd8edb'
+    },    
     title: {
         type: String,
-        required: true
+        required: true,
+        default: 'New Item'
     },
     qt: {
-        type: Number
+        type: Number,
+        default: 0
     }
 })

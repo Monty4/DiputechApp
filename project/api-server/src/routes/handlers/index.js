@@ -7,6 +7,8 @@ const getcentre = require('./getcentre')
 const getunitat = require('./getunitat')
 const listcentres = require('./listcentres')
 const liststock = require('./liststock')
+const newstock = require('./newstock')
+const updatestock = require('./updatestock')
 
 module.exports = {
     login,
@@ -17,5 +19,7 @@ module.exports = {
     getcentre,
     getunitat,
     listcentres,
-    liststock
+    liststock,
+    newstock,
+    updatestock
 } 

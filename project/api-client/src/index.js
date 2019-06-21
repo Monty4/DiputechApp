@@ -67,6 +67,13 @@ const api = {
 
     stock(id, description) {
         return this._call('get', 'stock', undefined, { id, description })
+    },
+    newStock(centre,title,qt) {
+        return this._call('get', 'newstock', undefined, { centre, title, qt })
+    },
+
+    updateStock(id,title,qt) {
+        return this._call('get', 'updatestock', undefined, { id, title, qt })
     }
 }
 
