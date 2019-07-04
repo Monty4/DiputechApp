@@ -5,5 +5,9 @@ const Centre = new Schema({
     title: {
         type: String,
         required: true
+    },
+    updated: {
+        type: String,
+        required: true
     }
 })

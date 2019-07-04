@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const { Schema, Schema: { ObjectId } } = mongoose
 
-    module.exports = new Schema({
+module.exports = new Schema({
     name: {
         type: String,
         required: true
@@ -28,7 +28,8 @@ const { Schema, Schema: { ObjectId } } = mongoose
         type: Number
     },
     unitat: {
-        type: String
+        type: ObjectId,
+        ref: 'Unitat'
     },
     centre: {
         type: ObjectId,

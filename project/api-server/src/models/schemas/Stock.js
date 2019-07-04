@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 const { Schema, Schema: { ObjectId } } = mongoose
-// const Schema = mongoose.Schema
 
 module.exports = new Schema({
     centre: {
