@@ -4,6 +4,7 @@
 ## DESCRIPTION
 
 The project is an APP for technical department where we can find information from the environtment
+At the moment, we can look for Users and update Stock
 
 ## Personal API's and APP
 
